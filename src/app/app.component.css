@@ -1,0 +1,82 @@
+h1 {
+    text-align: center;
+  }
+  
+  form {
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+
+  /* Genel Stil Ayarları */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Arka plan rengi */
+  }
+  
+  /* Başlık Stil Ayarları */
+  h1 {
+    color: #343a40; /* Başlık rengi */
+    font-size: 2.5rem; /* Başlık boyutu */
+  }
+  
+  /* Form Grup Stil Ayarları */
+  .form-group {
+    margin-bottom: 1.5rem; /* Form grubu aralığı */
+  }
+  
+  /* Tablo Stil Ayarları */
+  .table {
+    border-radius: 0.5rem; /* Kenar yuvarlama */
+    overflow: hidden; /* Kenar yuvarlama için taşmayı gizle */
+  }
+  
+  /* Tablo Başlığı Stil Ayarları */
+  .thead-light {
+    background-color: #e9ecef; /* Tablo başlığı arka plan rengi */
+  }
+  
+  /* Tablo Satırı Stil Ayarları */
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2; /* Tek satır rengi */
+  }
+  
+  /* Tablo Satırı Üzerinde Hover Efekti */
+  .table tbody tr:hover {
+    background-color: #d1ecf1; /* Hover efekti */
+  }
+  
+  /* Checkbox Stil Ayarları */
+  .form-check-input {
+    margin-top: 0.3rem; /* Checkbox üst marj */
+  }
+  
+  /* Responsive Stil Ayarları */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 15px; /* Mobilde iç boşluk */
+      padding-right: 15px; /* Mobilde iç boşluk */
+    }
+  
+    h1 {
+      font-size: 2rem; /* Mobilde başlık boyutu */
+    }
+  
+    .table {
+      font-size: 0.9rem; /* Mobilde tablo font boyutu */
+    }
+  }
+  
+  

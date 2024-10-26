@@ -1,0 +1,56 @@
+<div>
+  <h1>Ürün Filtreleme</h1>
+
+  <div>
+    <label for="title">Ürün Adı:</label>
+    <input id="title" type="text" [(ngModel)]="searchCriteria.title" (input)="filterProducts()">
+
+    <label for="category">Kategori:</label>
+    <select id="category" [(ngModel)]="searchCriteria.category" (change)="filterProducts()">
+      <option value="">Tümü</option>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+
+    <label for="brand">Marka:</label>
+    <select id="brand" [(ngModel)]="searchCriteria.brand" (change)="filterProducts()">
+      <option value="">Tümü</option>
+      <option *ngFor="let brand of brands" [value]="brand">{{ brand }}</option>
+    </select>
+
+    <label for="priceMin">Minimum Fiyat:</label>
+    <input id="priceMin" type="number" [(ngModel)]="searchCriteria.priceMin" (input)="filterProducts()">
+
+    <label for="priceMax">Maksimum Fiyat:</label>
+    <input id="priceMax" type="number" [(ngModel)]="searchCriteria.priceMax" (input)="filterProducts()">
+
+    <label for="ratingMin">Minimum Puan:</label>
+    <input id="ratingMin" type="number" [(ngModel)]="searchCriteria.ratingMin" (input)="filterProducts()">
+
+   
+    <label for="inStockOnly">Sadece Stoktaki Ürünler:</label>
+    <input id="inStockOnly" type="checkbox" [(ngModel)]="searchCriteria.inStockOnly" (change)="filterProducts()">
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Ürün Adı</th>
+        <th>Fiyat</th>
+        <th>Kategori</th>
+        <th>Marka</th>
+        <th>Puan</th>
+        <th>Stok Durumu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of filteredProducts">
+        <td>{{ product.title }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.brand }}</td>
+        <td>{{ product.rating }}</td>
+        <td>{{ product.inStock ? 'Var' : 'Yok' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
